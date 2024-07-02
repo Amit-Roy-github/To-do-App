@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+     padding: 0;
+      box-sizing: border-box ;
+}
+body{
+     height: 100vh ;
+      background: linear-gradient(#ffd55c 50% , #5a95ff  50% ) ;
+}
+.container{
+        /* background: red; */
+    font-family: "Poppins" , sans-serif ;
+    position: absolute;
+    width: min(95vw , 31em );
+    margin: 5rem 25rem 
+}
+.app{
+   padding: 2rem 2.5rem;
+   background: #f1f8fb;
+   box-shadow: 0 1em 2em rgba(0 , 0 , 0 , 0.3 );
+   border-radius: 0.8rem ;
+
+}
+.wrapper{
+        display: grid ;
+        grid-template-columns: 8fr 4fr ;
+        gap: 1rem ;
+}
+.wrapper input{
+        position: relative;
+        width: 100% ;
+        padding: 1em 0.6rem;
+        border-radius: 0.3rem ;
+        border: none ;
+        background: transparent;
+        border-bottom: 2px solid #d1d3d4;
+        color: #111111;
+        font-size: 0.9rem;
+}
+.wrapper input:focus{
+        outline: none ;
+        border-color: #5a95ff;
+}
+.wrapper .add{
+        border: none ;
+        outline: none ;
+        font-size: 1rem ;
+        font-weight: 600;
+        background: #5a95ff;
+        border-radius: 0.5rem ;
+        color: #ffffff;
+        cursor: pointer;
+}
+.tasks{
+        margin-top: 1rem;
+}
+.tasks p{
+        margin-bottom: 1rem ;
+}
+.task{
+        padding: 0.8rem 1rem ;
+        background: #ffffff;
+        border-radius: 0.8rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.5);
+        margin-bottom: 0.5rem ;
+
+        display: grid ;
+        grid-template-columns: 1fr 8fr 2fr 2fr ;
+        gap: 1rem ;
+        align-items: center ;
+        cursor: pointer;
+}
+.task-check{
+        position: relative;
+        appearance: none ;
+        height: 20px;width: 20px ;
+        border-radius: 50%;
+        border: 2px solid #e1e1e1;
+}
+.task-check::before{
+        content: "" ;
+        position: absolute;
+        transform: translate(-50% , -50% );
+        top: 50% ;left: 50% ;
+}
+.task-check:checked{
+        background-color: #5a95ff ;
+        border-color: #5a95ff ;
+}
+.task-check:checked::before{
+        position: absolute;
+        content: "\f00c";
+        color: #ffffff;
+        font-size: 0.8rem ;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900 ;
+}
+.task span{
+        font-size: 1rem ;
+        font-weight: 500 ;
+        word-break: break-all;
+}
+ .task button{
+        color: #ffffff;
+        border-radius: 0.5rem ;
+        width: 100% ;
+        border: none ;
+        padding: 1rem 0 ;
+        cursor: pointer;
+        outline: none ;
+ }
+ .task .edit{
+        background-color: #5a95ff;
+ }
+ .task .delete{
+        background-color: #ff5c5c;
+ }
+ #count-value{
+        color: #5a95ff;
+ }
+ .completed{
+        text-decoration: line-through ;
+        color: #a0a0a0;
+ }
+.error{
+        text-align: center;
+        background: #ffffff;
+        margin: 1.5rem 0;
+        padding: 0.7rem ;
+        border-radius: 0.8rem;
+        color: #ff5c5c;
+        font-weight: 600;
+        font-size: 16px;
+        display: none ;
+}
